@@ -102,7 +102,7 @@ In the previous section, we analyzed the decomposition graphs to inform forecast
 
 1. ETS Models
 
-2.Seasonal ARIMA
+  2.Seasonal ARIMA
 
 3. ARMA Model
 
