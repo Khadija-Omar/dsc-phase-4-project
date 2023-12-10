@@ -95,22 +95,8 @@ The Error plot of the series presents a fluctuations between large and smaller e
 # 4.Modelling
 
 
-<<<<<<< HEAD
+
 We analyze the decomposition graphs to inform forecasting models on the business problem. In this section, we determine the appropriate measurements to apply to the ETS model, the (Seasonal) ARIMA, ARMA, and ARIMA models
-=======
-Build the forecasting Models:
-
-
-In the previous section, we analyzed the decomposition graphs to inform forecasting models on the business problem. In this section, we determine the appropriate measurements to apply to the ETS model, the (Seasonal) ARIMA, ARMA, ARIMA models. Then we compare the models based on in-sample errors.
-
-1. ETS Models
-
-  2.Seasonal ARIMA
-
-3. ARMA Model
-
-4. ARIMA Model
->>>>>>> c0cd8e5ba3418823d407e3158c29fa36dd307583
 
 
 
@@ -133,7 +119,7 @@ The ACF plot shows a strong negative correlation at lag-1 which is confirmed in 
 # 5.Evaluation
 
 
-In this section we describe the in-sample errors based on ETS models. The in-sample error measures give us a look at how well our model is able to predict future values. Among the various Error Terms chosen:
+In this section, we describe the in-sample errors based on ETS models. The in-sample error measures give us a look at how well our model can predict future values. Among the various Error Terms chosen:
 
 RMSE (Rooted Mean Squared Error)
 
@@ -153,7 +139,7 @@ We also check the AIC and BIC values. The Akaike Information Criterion (AIC) and
 
 
 
-After we analyze the training part of time series data using ETS Models , Seasonal ARIMA, ARMA and ARIMA. Then we compare the performance of each model with In-Sample Error Measures such as RMSE, MAPE and MASE. When comparing the in-sample error measures we used, the ETS model does have a much narrower standard deviation(RMSE) compared to other models. Though the MASE value of ETS model is lower than that of Seasonal ARIMA and ARMA they are below 1.00, the generally accepted MASE threshold for model accuracy.
+After we analyze the training part of time series data using ETS Models, Seasonal ARIMA, ARMA, and ARIMA. Then we compare the performance of each model with In-Sample Error Measures such as RMSE, MAPE, and MASE. When comparing the in-sample error measures we used, the ETS model does have a much narrower standard deviation(RMSE) compared to other models. Though the MASE value of the ETS model is lower than that of Seasonal ARIMA and ARMA they are below 1.00, the generally accepted MASE threshold for model accuracy.
 
 
 
@@ -171,38 +157,37 @@ When looking at the model's ability to predict the holdout sample, we can recogn
 Forecast for the next 4 months of Sales:
 
 
-Previously, we concluded that the Seasonal ARIMA model shows better performance in terms of prediction. Now, we forecast for the next four-month sales using all the time series data based on the same Seasonal ARIMA model. First, we diagnose the stationarity of the whole time series data again. Then the forecast results are calculated using 95% and 80% confidence intervals.Lastly we visualize the forecast results.
+Previously, we concluded that the Seasonal ARIMA model shows better performance in terms of prediction. Now, we forecast for the next four months ' sales using all the time series data based on the same Seasonal ARIMA model. First, we diagnose the stationarity of the whole time series data again. Then the forecast results are calculated using 95% and 80% confidence intervals. Lastly, we visualize the forecast results.
 
 
 
 # Summary
 
 
-This analysis is mainly about forecasting for upcoming sales in a Shampoo Company. Firstly, we investigate and prepare the time series data. The provided data was appropriate to use time series models and we held out the last 4 periods of data points for validation. Then, we determined Trend, Seasonal and Error components in the data based on decomposition plots. After that, we analyse the data by applying the ARMA, ARIMA, SEASONAL ARIMA and ETS models and describe the errors for the models. We compared the in-sample error measurements to the models,also compared their aic and bic values and compared error measurements for the holdout sample in the forecast. Finally,we choose the best fitting model and forecast the next four periods.
-<<<<<<< HEAD
+This analysis is mainly about forecasting upcoming sales in a Shampoo Company. Firstly, we investigate and prepare the time series data. The provided data was appropriate to use time series models and we held out the last 4 periods of data points for validation. Then, we determined Trend, Seasonal, and Error components in the data based on decomposition plots. After that, we analyze the data by applying the ARMA, ARIMA, SEASONAL ARIMA, and ETS models and describe the errors for the models. We compared the in-sample error measurements to the models, also compared their aic and bic values, and compared error measurements for the holdout sample in the forecast. Finally, we choose the best fitting model and forecast the next four periods.
 
 
 
-Following our analysis and modelling we can come up the following recommendations:
+
+Following our analysis and modeling we can come up with the following recommendations:
 
 
 
-1.Implement the seasonal arima model.
+1. Implement the seasonal arima model.
 
 
 
-2.Analyze the identified trends, seasonal patterns, and other insights from the model to inform marketing strategies.
+2. Analyze the identified trends, seasonal patterns, and other insights from the model to inform marketing strategies.
 
 
 
-3.When making business decisions based on the forecasted sales, consider the 95% confidence intervals provided by the Seasonal ARIMA model.
+3. When making business decisions based on the forecasted sales, consider the 95% confidence intervals provided by the Seasonal ARIMA model.
 
 
 
-4.Use the forecasting insights to align inventory levels with anticipated sales.
+4. Use the forecasting insights to align inventory levels with anticipated sales.
 
 
 
-5.Investigate any outliers or anomalies observed in the data, especially in the year 2013. Understanding the factors contributing to exceptionally high or low sales in specific months can provide valuable insights for future planning.
-=======
->>>>>>> c0cd8e5ba3418823d407e3158c29fa36dd307583
+5. Investigate any outliers or anomalies observed in the data, especially in the year 2013. Understanding the factors contributing to exceptionally high or low sales in specific months can provide valuable insights for future planning.
+
