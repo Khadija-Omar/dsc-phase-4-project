@@ -95,7 +95,22 @@ The Error plot of the series presents a fluctuations between large and smaller e
 # 4.Modelling
 
 
+<<<<<<< HEAD
 We analyze the decomposition graphs to inform forecasting models on the business problem. In this section, we determine the appropriate measurements to apply to the ETS model, the (Seasonal) ARIMA, ARMA, and ARIMA models
+=======
+Build the forecasting Models:
+
+
+In the previous section, we analyzed the decomposition graphs to inform forecasting models on the business problem. In this section, we determine the appropriate measurements to apply to the ETS model, the (Seasonal) ARIMA, ARMA, ARIMA models. Then we compare the models based on in-sample errors.
+
+1. ETS Models
+
+  2.Seasonal ARIMA
+
+3. ARMA Model
+
+4. ARIMA Model
+>>>>>>> c0cd8e5ba3418823d407e3158c29fa36dd307583
 
 
 
@@ -164,6 +179,7 @@ Previously, we concluded that the Seasonal ARIMA model shows better performance 
 
 
 This analysis is mainly about forecasting for upcoming sales in a Shampoo Company. Firstly, we investigate and prepare the time series data. The provided data was appropriate to use time series models and we held out the last 4 periods of data points for validation. Then, we determined Trend, Seasonal and Error components in the data based on decomposition plots. After that, we analyse the data by applying the ARMA, ARIMA, SEASONAL ARIMA and ETS models and describe the errors for the models. We compared the in-sample error measurements to the models,also compared their aic and bic values and compared error measurements for the holdout sample in the forecast. Finally,we choose the best fitting model and forecast the next four periods.
+<<<<<<< HEAD
 
 
 
@@ -188,3 +204,5 @@ Following our analysis and modelling we can come up the following recommendation
 
 
 5.Investigate any outliers or anomalies observed in the data, especially in the year 2013. Understanding the factors contributing to exceptionally high or low sales in specific months can provide valuable insights for future planning.
+=======
+>>>>>>> c0cd8e5ba3418823d407e3158c29fa36dd307583
