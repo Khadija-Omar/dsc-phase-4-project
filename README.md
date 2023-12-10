@@ -20,23 +20,23 @@ Specific Objectives:
 
 
 
-1.To forecast sales using time series modellling.
+1. Forecast sales using time series modellling.
 
 
 
-2.To do exploratory data analysis on the data
+2. Do exploratory data analysis on the data
 
 
 
-3.To Utilize time series analysis techniques to identify underlying patterns, trends, and seasonality in the monthly sales data.
+3. Utilize time series analysis techniques to identify underlying patterns, trends, and seasonality in the monthly sales data.
 
 
 
-4.To Build a time series predictive model that can forecast real estate prices.
+4. Build a time series predictive model that can forecast shampoo sales.
 
 
 
-5.To Evaluate the forecasting model performance by comparing its predictions against actual sales.
+5. Evaluate the forecasting model performance by comparing its predictions against actual sales.
 
 
 # Your Task: Forecasting Monthly Shampoo Sales using Time Series Modelling
@@ -95,22 +95,23 @@ The Error plot of the series presents a fluctuations between large and smaller e
 # 4.Modelling
 
 
-Build the forecasting Models:
-
-
-In the previous section, we analyzed the decomposition graphs to inform forecasting models on the business problem. In this section, we determine the appropriate measurements to apply to the ETS model, the (Seasonal) ARIMA, ARMA, ARIMA models. Then we compare the models based on in-sample errors.
-
-1. ETS Models
-
-2.Seasonal ARIMA
-
-3. ARMA Model
-
-4. ARIMA Model
+We analyze the decomposition graphs to inform forecasting models on the business problem. In this section, we determine the appropriate measurements to apply to the ETS model, the (Seasonal) ARIMA, ARMA, and ARIMA models
 
 
 
-In Time Series Analysis, we should start the analysis with a "stationary" data. make the data stationary. As the decomposition plots exhibit, the provided dataset seems to have seasonality and linear Trend. Augmented Dickey Fuller test reminds us the fact that the given data is not stationary.
+We start by fitting the ETS model. The error plot of the decomposed graph presents fluctuations between large and smaller errors as the time series goes on. Since the fluctuations are not consistent in magnitude then we will apply error in a multiplicative manner for  our ETS model.
+
+
+As the decomposition plots exhibit, the provided dataset seems to have seasonality and this suggests that any ARIMA models used for analysis will need seasonal differencing before using it for modeling. The augmented Dickey-Fuller test reminds us of the fact that the given data is not stationary.
+
+
+
+We find the optimal parameters based on the Time Series ACF and PACF graphs. The seasonal first difference of the series has removed most of the significant lags from the ACF and PACF. It seems no need for further differencing. The remaining correlation can be considered by using autoregressive and moving average terms.
+
+
+
+The ACF plot shows a strong negative correlation at lag-1 which is confirmed in the PACF. This suggests an MA(1) model since there is only 1 significant lag. The seasonal lags (lag 12, 24, etc.) in the ACF and PACF do not have any significant correlation so there will be no need for seasonal autoregressive or moving average terms. Therefore, the model terms for my Seasonal ARIMA model are: SARIMA(0, 1, 1)(0, 1, 0)[12].We then fit ARMA and ARIMA models . 
+
 
 
 
@@ -155,10 +156,35 @@ When looking at the model's ability to predict the holdout sample, we can recogn
 Forecast for the next 4 months of Sales:
 
 
-Previously, we concluded that the Seasonal ARIMA model shows better performance in terms of prediction. Now, we forecast for the next four-month sales using all the time series data based on the same Seasonal ARIMA model. First, we diagnose the stationarity of the whole time series data again. Then the forecast results are calculated using 95% and 80% confidence intervals.
+Previously, we concluded that the Seasonal ARIMA model shows better performance in terms of prediction. Now, we forecast for the next four-month sales using all the time series data based on the same Seasonal ARIMA model. First, we diagnose the stationarity of the whole time series data again. Then the forecast results are calculated using 95% and 80% confidence intervals.Lastly we visualize the forecast results.
+
 
 
 # Summary
 
 
 This analysis is mainly about forecasting for upcoming sales in a Shampoo Company. Firstly, we investigate and prepare the time series data. The provided data was appropriate to use time series models and we held out the last 4 periods of data points for validation. Then, we determined Trend, Seasonal and Error components in the data based on decomposition plots. After that, we analyse the data by applying the ARMA, ARIMA, SEASONAL ARIMA and ETS models and describe the errors for the models. We compared the in-sample error measurements to the models,also compared their aic and bic values and compared error measurements for the holdout sample in the forecast. Finally,we choose the best fitting model and forecast the next four periods.
+
+
+
+Following our analysis and modelling we can come up the following recommendations:
+
+
+
+1.Implement the seasonal arima model.
+
+
+
+2.Analyze the identified trends, seasonal patterns, and other insights from the model to inform marketing strategies.
+
+
+
+3.When making business decisions based on the forecasted sales, consider the 95% confidence intervals provided by the Seasonal ARIMA model.
+
+
+
+4.Use the forecasting insights to align inventory levels with anticipated sales.
+
+
+
+5.Investigate any outliers or anomalies observed in the data, especially in the year 2013. Understanding the factors contributing to exceptionally high or low sales in specific months can provide valuable insights for future planning.
